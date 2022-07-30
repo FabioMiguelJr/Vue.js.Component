@@ -19,9 +19,47 @@ export default {
       count: 0,
     };
   },
+  computed: {
+    computedTitle() {
+      return "Teste " + this.title;
+    },
+  },
   methods: {},
   components: {
     LocalComponent,
+  },
+
+  // Ganchos de inicialização
+  beforeCreate() {
+    console.log("Before Create", this.title, this.computedTitle);
+  },
+  created() {
+    console.log("Created", this.title, this.computedTitle);
+  },
+
+  // Ganchos de montagem (inserção no DOM)
+  beforeMount() {
+    console.log("Before mount");
+  },
+  mounted() {
+    console.log("Mounted");
+  },
+
+  // Ganchos de atualização
+  beforeUpdate() {
+    console.log("Before Update");
+  },
+  updated() {
+    console.log("Updated");
+  },
+
+  // Ganchos de destruição
+  beforeUnmount() {
+    console.log("Before Unmount");
+  },
+
+  unmounted() {
+    console.log("Unmounted");
   },
 };
 </script>
