@@ -10,6 +10,7 @@ export default {
   data() {
     return {
       title: "Component Title",
+      // Pode usar também: Number, Object, Boolean, Array, Function
     };
   },
   methods: {},
