@@ -1,6 +1,10 @@
 <template>
   <global-component></global-component>
-  <local-component :title="title" @addclick="count += $event"></local-component>
+  <local-component :title="title" @addclick="count += $event">
+    <!-- Slot Test -->
+    <template v-slot:header> Slot Header </template>
+    <template v-slot:content> Slot Content </template>
+  </local-component>
   <p>Count: {{ count }}</p>
 </template>
 
