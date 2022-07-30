@@ -1,6 +1,7 @@
 <template>
   <global-component></global-component>
-  <local-component :title="title"></local-component>
+  <local-component :title="title" @addclick="count += $event"></local-component>
+  <p>Count: {{ count }}</p>
 </template>
 
 <script>
@@ -11,6 +12,7 @@ export default {
     return {
       title: "Component Title",
       // Pode usar também: Number, Object, Boolean, Array, Function
+      count: 0,
     };
   },
   methods: {},
